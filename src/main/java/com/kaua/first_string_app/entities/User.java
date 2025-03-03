@@ -1,11 +1,22 @@
 package com.kaua.first_string_app.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
 
+// começando as annotations do JPA pra instruir à ele que deve ser convertido os objetos pro modelo relacional (ORM)
+@Entity
+@Table(name = "tb_user") // renomeando pois a palavra user é reservada no banco H2
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // define o autoincrement
     @EqualsAndHashCode.Include
     private Long id;
+
     private String name;
     private String email;
     private String phone;

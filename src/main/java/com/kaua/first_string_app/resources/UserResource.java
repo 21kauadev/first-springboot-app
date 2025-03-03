@@ -20,8 +20,7 @@ public class UserResource {
     public ResponseEntity<User> findAll() {
         User user = new User(1L, "Maria", "maria@gmail.com", "99999999", "12345");
 
-        // ok -> método indica que tá tudo certo
-        // body -> corpo da requisição sendo passado o objeto user
+        // retorna um http ok com o objeto user no corpo da resposta
         return ResponseEntity.ok().body(user);
     }
 }
