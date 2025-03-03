@@ -1,4 +1,4 @@
-# first-stringboot-app
+# first-springboot-app
 
 ## Sobre
 
